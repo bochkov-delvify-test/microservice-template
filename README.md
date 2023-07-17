@@ -1,5 +1,7 @@
 # microservice-template
 
+![checks status](https://github.com/delvify-assessment/microservice-template/actions/workflows/pr.yml/badge.svg)
+
 ## Description
 
 This is a template for a microservice based on FastAPI and Docker.
@@ -92,7 +94,6 @@ After the service is up and running, you can access the API documentation at:
 
 #### Code formatting
 
-
 Please check the [Makefile](Makefile) for the authorities on a code style (check `do-lint` target).  
 You can also use the [pre-commit](https://pre-commit.com/) tool to automatically format your code before committing.
 
@@ -131,6 +132,7 @@ The pipeline runs the following steps:
 3. For API requests that need user authorization use get_current_user_id() function from `delvify.core.di` module
 
 ### If your microservice use a database
+
 1. Update last line of "settings.py"
 2. Update get_db() in di.py and uncomment import there
 3. Update docker-compose.yml
