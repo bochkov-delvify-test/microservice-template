@@ -6,15 +6,17 @@ from jose import JWTError, jwt
 from sqlalchemy.orm import Session
 
 from delvify.core import app_settings
+
 # from .db import SessionLocal
 
 
 def get_db() -> Session:
     try:
-        db = Session() # change to SessionLocal() if you are using a database
+        db = Session()  # change to SessionLocal() if you are using a database
         return db
     finally:
         db.close()
+
 
 def get_current_user_id(request: Request) -> Optional[int]:
     auth_header: str = request.headers.get("Authorization", "")
